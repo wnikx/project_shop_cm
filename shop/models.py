@@ -35,6 +35,8 @@ class Product(models.Model):
                                 decimal_places=2, verbose_name='Цена')
     min_volume = models.DecimalField(max_digits=3,
                                      decimal_places=2, verbose_name='Мин. кол-во')
+    aging = models.DecimalField(
+        max_digits=2, decimal_places=1, verbose_name='Выдержка', default=0)
     unit = models.CharField(max_length=2,
                             choices=MEASURMENT_UNIT_CHOICES, default=KILOGGRAM, verbose_name='Ед. измерения')
     available = models.BooleanField(default=True, verbose_name='Доступность')
