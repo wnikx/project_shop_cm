@@ -1,0 +1,16 @@
+{% extends 'shop/base.html' %}
+
+
+{% block title %}
+Категории продуктов
+{% endblock title %}
+
+
+
+{% block content %}
+
+{% for product in products %}
+<a href="{% url 'category_products' product.slug%}">{{product}}</a>
+{% endfor %}
+
+{% endblock content %}
