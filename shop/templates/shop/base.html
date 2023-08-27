@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +11,17 @@
         {% endblock title %}
     </title>
 
-<body>
+    <link href="{% static 'shop/css/base.css' %}" type="text/css" rel="stylesheet">
+</head>
 
-    {% block content %}
-    {% endblock content %}
+<body>
+    <div class="overlay">
+        Продукция
+    </div>
+    <div class="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,52 @@
+body {
+    background-image: url('/static/shop/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+  }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Здесь 0.5 - это значение прозрачности (от 0 до 1) */
+  z-index: 9999; /* Чтобы блок был поверх остального контента */
+}
+
+.content {
+  position: relative;
+  z-index: 10000; /* Чтобы контент был над блоком */
+  margin: 0 auto; /* Центрирование блока */
+  width: 50%; /* Ширина блока */
+  padding: 20px; /* Отступы внутри блока */
+  background-color: rgba(255, 255, 255, 0.5); /* Цвет фона блока */
+}
+
+nav {
+  background-color: #f2f2f2;
+  padding: 30px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+
+a:hover {
+  color: #666;
+}
