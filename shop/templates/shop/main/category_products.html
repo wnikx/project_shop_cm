@@ -3,3 +3,14 @@
 {% block title %}
 {{category.category_name}}
 {% endblock title %}
+
+
+
+{% block content %}
+
+{% for product in products %}
+<a href="{% url 'shop:info_product' category.slug product.slug%}">{{product}}</a>
+
+{% endfor %}
+
+{% endblock content %}

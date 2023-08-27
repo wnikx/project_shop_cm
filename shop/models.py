@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+from django.urls import reverse
 
 
 class Category(models.Model):
@@ -49,3 +50,9 @@ class Product(models.Model):
 
     def __str__(self):
         return self.product_name
+
+    def get_absolute_url(self):
+        print('прошло')
+        category = Category.objects.get(id=self.category_id)
+        print('Прошло')
+        return reverse('shop:info_product', args=[category.slug, self.slug])

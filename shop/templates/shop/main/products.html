@@ -10,7 +10,7 @@
 {% block content %}
 
 {% for product in products %}
-<a href="{% url 'category_products' product.slug%}">{{product}}</a>
+<a href="{% url 'shop:category_products' product.slug%}">{{product}}</a>
 {% endfor %}
 
 {% endblock content %}
