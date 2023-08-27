@@ -4,3 +4,12 @@
 {% block title %}
 {{product.product_name}}
 {% endblock title %}
+
+
+
+{% block content %}
+<img src="{{product.image.url}}">
+{{product.product_name}}
+{{product.description}}
+{{product.price}}
+{% endblock content %}
